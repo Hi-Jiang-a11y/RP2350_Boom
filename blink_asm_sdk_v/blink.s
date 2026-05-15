@@ -26,7 +26,7 @@ rst:
     ldr r0, =gpio15_ctrl
     mov r1, #5
     str r1, [r0, #0x0]
-    
+
     @ GPIO_15 Output Set
     mov r1, #1
     lsl r1, r1, #15
