@@ -1,0 +1,120 @@
+
+bin/reset_handler.o:     file format elf32-littlearm
+bin/reset_handler.o
+architecture: armv8-m.main, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+private flags = 0x5000000: [Version5 EABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000020  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000054  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00000054  2**0
+                  ALLOC
+  3 .debug_line   00000043  00000000  00000000  00000054  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  4 .debug_info   00000035  00000000  00000000  00000097  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  5 .debug_abbrev 00000021  00000000  00000000  000000cc  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_aranges 00000020  00000000  00000000  000000f0  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  7 .debug_str    0000005c  00000000  00000000  00000110  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .ARM.attributes 00000024  00000000  00000000  0000016c  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+20082000 l       *ABS*	00000000 STACK_TOP
+2007a000 l       *ABS*	00000000 STACK_LIMIT
+40048000 l       *ABS*	00000000 XOSC_BASE
+40048000 l       *ABS*	00000000 XOSC_CTRL
+40048004 l       *ABS*	00000000 XOSC_STATUS
+4004800c l       *ABS*	00000000 XOSC_STARTUP
+e0000000 l       *ABS*	00000000 PPB_BASE
+e000ed88 l       *ABS*	00000000 CPACR
+40010000 l       *ABS*	00000000 CLOCKS_BASE
+40010048 l       *ABS*	00000000 CLK_PERI_CTRL
+40020000 l       *ABS*	00000000 RESETS_BASE
+40020000 l       *ABS*	00000000 RESETS_RESET
+40023000 l       *ABS*	00000000 RESETS_RESET_CLEAR
+40020008 l       *ABS*	00000000 RESETS_RESET_DONE
+40028000 l       *ABS*	00000000 IO_BANK0_BASE
+00000084 l       *ABS*	00000000 IO_BANK0_GPIO16_CTRL_OFFSET
+40038000 l       *ABS*	00000000 PADS_BANK0_BASE
+00000044 l       *ABS*	00000000 PADS_BANK0_GPIO16_OFFSET
+40070000 l       *ABS*	00000000 UART0_BASE
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 g     F .text	00000020 Reset_Handler
+00000000         *UND*	00000000 Init_Stack
+00000000         *UND*	00000000 Init_XOSC
+00000000         *UND*	00000000 Enable_XOSC_Peri_Clock
+00000000         *UND*	00000000 Init_Subsystem
+00000000         *UND*	00000000 UART_Release_Reset
+00000000         *UND*	00000000 UART_Init
+00000000         *UND*	00000000 Enable_Coprocessor
+00000000         *UND*	00000000 main
+
+
+Contents of section .text:
+ 0000 fff7feff fff7feff fff7feff fff7feff  ................
+ 0010 fff7feff fff7feff fff7feff fff7febf  ................
+Contents of section .debug_line:
+ 0000 3f000000 02002300 00000201 fb0e0a00  ?.....#.........
+ 0010 01010101 00000001 00726573 65745f68  .........reset_h
+ 0020 616e646c 65722e73 00000000 00000502  andler.s........
+ 0030 00000000 032c012c 2c2c2c2c 2c2c0202  .....,.,,,,,,,..
+ 0040 000101                               ...             
+Contents of section .debug_info:
+ 0000 31000000 02000000 00000401 00000000  1...............
+ 0010 00000000 20000000 00000000 10000000  .... ...........
+ 0020 42000000 0180024e 00000001 00000000  B......N........
+ 0030 20000000 00                           ....           
+Contents of section .debug_abbrev:
+ 0000 01110110 06110112 01030e1b 0e250e13  .............%..
+ 0010 05000002 2e00030e 3f0c1101 12010000  ........?.......
+ 0020 00                                   .               
+Contents of section .debug_aranges:
+ 0000 1c000000 02000000 00000400 00000000  ................
+ 0010 00000000 20000000 00000000 00000000  .... ...........
+Contents of section .debug_str:
+ 0000 72657365 745f6861 6e646c65 722e7300  reset_handler.s.
+ 0010 2f686f6d 652f4a75 6c696574 2f706c61  /home/Juliet/pla
+ 0020 7967726f 756e642f 72703233 35302f52  yground/rp2350/R
+ 0030 50323335 305f5541 52545f44 72697665  P2350_UART_Drive
+ 0040 7200474e 55204153 20322e34 33005265  r.GNU AS 2.43.Re
+ 0050 7365745f 48616e64 6c657200           set_Handler.    
+Contents of section .ARM.attributes:
+ 0000 41230000 00616561 62690001 19000000  A#...aeabi......
+ 0010 05436f72 7465782d 4d333300 0611074d  .Cortex-M33....M
+ 0020 09032e01                             ....            
+
+Disassembly of section .text:
+
+00000000 <Reset_Handler>:
+   0:	f7ff fffe 	bl	0 <Init_Stack>
+			0: R_ARM_THM_CALL	Init_Stack
+   4:	f7ff fffe 	bl	0 <Init_XOSC>
+			4: R_ARM_THM_CALL	Init_XOSC
+   8:	f7ff fffe 	bl	0 <Enable_XOSC_Peri_Clock>
+			8: R_ARM_THM_CALL	Enable_XOSC_Peri_Clock
+   c:	f7ff fffe 	bl	0 <Init_Subsystem>
+			c: R_ARM_THM_CALL	Init_Subsystem
+  10:	f7ff fffe 	bl	0 <UART_Release_Reset>
+			10: R_ARM_THM_CALL	UART_Release_Reset
+  14:	f7ff fffe 	bl	0 <UART_Init>
+			14: R_ARM_THM_CALL	UART_Init
+  18:	f7ff fffe 	bl	0 <Enable_Coprocessor>
+			18: R_ARM_THM_CALL	Enable_Coprocessor
+  1c:	f7ff bffe 	b.w	0 <main>
+			1c: R_ARM_THM_JUMP24	main

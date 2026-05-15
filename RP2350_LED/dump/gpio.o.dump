@@ -1,0 +1,264 @@
+
+bin/gpio.o:     file format elf32-littlearm
+bin/gpio.o
+architecture: armv8-m.main, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+private flags = 0x5000000: [Version5 EABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000054  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000088  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00000088  2**0
+                  ALLOC
+  3 .debug_line   00000059  00000000  00000000  00000088  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  4 .debug_info   00000026  00000000  00000000  000000e1  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  5 .debug_abbrev 00000014  00000000  00000000  00000107  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_aranges 00000020  00000000  00000000  00000120  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  7 .debug_str    0000003d  00000000  00000000  00000140  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .ARM.attributes 00000024  00000000  00000000  0000017d  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+0000000f l       *ABS*	00000000 LED_PIN
+00008000 l       *ABS*	00000000 LED_PIN_MASK
+00000056 l       *ABS*	00000000 LED_PAD_SETUP
+0000000c l       .text	00000000 reset_wait
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 g     F .text	00000000 gpio_initialize
+0000003c g     F .text	00000000 led_on
+
+
+Contents of the .debug_line section:
+
+CU: gpio.s:
+File name                        Line number    Starting address    View    Stmt
+gpio.s                                    16                   0               x
+gpio.s                                    17                 0x2               x
+gpio.s                                    18                 0x6               x
+gpio.s                                    19                 0x8               x
+gpio.s                                    20                 0xa               x
+gpio.s                                    23                 0xc               x
+gpio.s                                    24                 0xe               x
+gpio.s                                    25                0x10               x
+gpio.s                                    28                0x12               x
+gpio.s                                    29                0x14               x
+gpio.s                                    30                0x16               x
+gpio.s                                    31                0x18               x
+gpio.s                                    32                0x1a               x
+gpio.s                                    33                0x1c               x
+gpio.s                                    34                0x20               x
+gpio.s                                    37                0x22               x
+gpio.s                                    38                0x24               x
+gpio.s                                    39                0x26               x
+gpio.s                                    40                0x28               x
+gpio.s                                    41                0x2a               x
+gpio.s                                    42                0x2c               x
+gpio.s                                    43                0x2e               x
+gpio.s                                    46                0x30               x
+gpio.s                                    47                0x34               x
+gpio.s                                    48                0x38               x
+gpio.s                                    49                0x3a               x
+gpio.s                                    53                0x3c               x
+gpio.s                                    54                0x40               x
+gpio.s                                    55                0x44               x
+gpio.s                                    56                0x46               x
+gpio.s                                    16                0x48               x
+gpio.s                                    28                0x4c               x
+gpio.s                                    37                0x50               x
+gpio.s                                     -                0x54
+
+
+Contents of section .text:
+ 0000 11484ff4 10710368 8b430360 83680b42  .HO..q.h.C.`.h.B
+ 0010 fcd00e48 04300f21 89004018 4ff05601  ...H.0.!..@.O.V.
+ 0020 01600b48 0f21c900 40180430 05210160  .`.H.!..@..0.!.`
+ 0030 4ff05040 4ff40041 81637047 4ff05040  O.P@O..A.cpGO.P@
+ 0040 4ff40041 81617047 00000240 00800340  O..A.apG...@...@
+ 0050 00800240                             ...@            
+Contents of section .debug_line:
+ 0000 55000000 02001a00 00000201 fb0e0a00  U...............
+ 0010 01010101 00000001 00677069 6f2e7300  .........gpio.s.
+ 0020 00000000 00050200 00000003 0f011e2c  ...............,
+ 0030 1e1e201e 1e201e1e 1e1e1e2c 201e1e1e  .. .. ....., ...
+ 0040 1e1e1e20 2c2c1e21 2c2c1e03 581d030c  ... ,,.!,,..X...
+ 0050 2b03092b 02020001 01                 +..+.....       
+Contents of section .debug_info:
+ 0000 22000000 02000000 00000401 00000000  "...............
+ 0010 00000000 54000000 00000000 07000000  ....T...........
+ 0020 31000000 0180                        1.....          
+Contents of section .debug_abbrev:
+ 0000 01110010 06110112 01030e1b 0e250e13  .............%..
+ 0010 05000000                             ....            
+Contents of section .debug_aranges:
+ 0000 1c000000 02000000 00000400 00000000  ................
+ 0010 00000000 54000000 00000000 00000000  ....T...........
+Contents of section .debug_str:
+ 0000 6770696f 2e73002f 686f6d65 2f4a756c  gpio.s./home/Jul
+ 0010 6965742f 706c6179 67726f75 6e642f72  iet/playground/r
+ 0020 70323335 302f5250 32333530 5f4c4544  p2350/RP2350_LED
+ 0030 00474e55 20415320 322e3433 00        .GNU AS 2.43.   
+Contents of section .ARM.attributes:
+ 0000 41230000 00616561 62690001 19000000  A#...aeabi......
+ 0010 05436f72 7465782d 4d333300 0611074d  .Cortex-M33....M
+ 0020 09032e01                             ....            
+
+Disassembly of section .text:
+
+00000000 <gpio_initialize>:
+   0:	4811      	ldr	r0, [pc, #68]	@ (48 <led_on+0xc>)
+   2:	f44f 7110 	mov.w	r1, #576	@ 0x240
+   6:	6803      	ldr	r3, [r0, #0]
+   8:	438b      	bics	r3, r1
+   a:	6003      	str	r3, [r0, #0]
+
+0000000c <reset_wait>:
+   c:	6883      	ldr	r3, [r0, #8]
+   e:	420b      	tst	r3, r1
+  10:	d0fc      	beq.n	c <reset_wait>
+  12:	480e      	ldr	r0, [pc, #56]	@ (4c <led_on+0x10>)
+  14:	3004      	adds	r0, #4
+  16:	210f      	movs	r1, #15
+  18:	0089      	lsls	r1, r1, #2
+  1a:	1840      	adds	r0, r0, r1
+  1c:	f04f 0156 	mov.w	r1, #86	@ 0x56
+  20:	6001      	str	r1, [r0, #0]
+  22:	480b      	ldr	r0, [pc, #44]	@ (50 <led_on+0x14>)
+  24:	210f      	movs	r1, #15
+  26:	00c9      	lsls	r1, r1, #3
+  28:	1840      	adds	r0, r0, r1
+  2a:	3004      	adds	r0, #4
+  2c:	2105      	movs	r1, #5
+  2e:	6001      	str	r1, [r0, #0]
+  30:	f04f 4050 	mov.w	r0, #3489660928	@ 0xd0000000
+  34:	f44f 4100 	mov.w	r1, #32768	@ 0x8000
+  38:	6381      	str	r1, [r0, #56]	@ 0x38
+  3a:	4770      	bx	lr
+
+0000003c <led_on>:
+  3c:	f04f 4050 	mov.w	r0, #3489660928	@ 0xd0000000
+  40:	f44f 4100 	mov.w	r1, #32768	@ 0x8000
+  44:	6181      	str	r1, [r0, #24]
+  46:	4770      	bx	lr
+  48:	40020000 			@ <UNDEFINED> instruction: 40020000
+  4c:	40038000 			@ <UNDEFINED> instruction: 40038000
+  50:	40028000 			@ <UNDEFINED> instruction: 40028000
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+   0:	00000055 			@ <UNDEFINED> instruction: 00000055
+   4:	001a0002 			@ <UNDEFINED> instruction: 001a0002
+   8:	01020000 			@ <UNDEFINED> instruction: 01020000
+   c:	000a0efb 	strdeq	r0, [sl], -fp
+  10:	01010101 			@ <UNDEFINED> instruction: 01010101
+  14:	01000000 			@ <UNDEFINED> instruction: 01000000
+  18:	69706700 			@ <UNDEFINED> instruction: 69706700
+  1c:	00732e6f 			@ <UNDEFINED> instruction: 00732e6f
+  20:	00000000 			@ <UNDEFINED> instruction: 00000000
+  24:	00020500 			@ <UNDEFINED> instruction: 00020500
+			27: R_ARM_ABS32	.text
+  28:	03000000 	movweq	r0, #0
+  2c:	2c1e010f 			@ <UNDEFINED> instruction: 2c1e010f
+  30:	1e201e1e 			@ <UNDEFINED> instruction: 1e201e1e
+  34:	1e1e201e 			@ <UNDEFINED> instruction: 1e1e201e
+  38:	2c1e1e1e 			@ <UNDEFINED> instruction: 2c1e1e1e
+  3c:	1e1e1e20 			@ <UNDEFINED> instruction: 1e1e1e20
+  40:	201e1e1e 			@ <UNDEFINED> instruction: 201e1e1e
+  44:	211e2c2c 			@ <UNDEFINED> instruction: 211e2c2c
+  48:	031e2c2c 			@ <UNDEFINED> instruction: 031e2c2c
+  4c:	0c031d58 			@ <UNDEFINED> instruction: 0c031d58
+  50:	2b09032b 			@ <UNDEFINED> instruction: 2b09032b
+  54:	01000202 			@ <UNDEFINED> instruction: 01000202
+  58:	Address 0x58 is out of bounds.
+
+
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+   0:	00000022 			@ <UNDEFINED> instruction: 00000022
+   4:	00000002 			@ <UNDEFINED> instruction: 00000002
+			6: R_ARM_ABS32	.debug_abbrev
+   8:	01040000 			@ <UNDEFINED> instruction: 01040000
+	...
+			c: R_ARM_ABS32	.debug_line
+			10: R_ARM_ABS32	.text
+  14:	00000054 			@ <UNDEFINED> instruction: 00000054
+			14: R_ARM_ABS32	.text
+  18:	00000000 			@ <UNDEFINED> instruction: 00000000
+			18: R_ARM_ABS32	.debug_str
+  1c:	00000007 			@ <UNDEFINED> instruction: 00000007
+			1c: R_ARM_ABS32	.debug_str
+  20:	00000031 			@ <UNDEFINED> instruction: 00000031
+			20: R_ARM_ABS32	.debug_str
+  24:	Address 0x24 is out of bounds.
+
+
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+   0:	10001101 			@ <UNDEFINED> instruction: 10001101
+   4:	12011106 			@ <UNDEFINED> instruction: 12011106
+   8:	1b0e0301 			@ <UNDEFINED> instruction: 1b0e0301
+   c:	130e250e 	movwne	r2, #58638	@ 0xe50e
+  10:	00000005 			@ <UNDEFINED> instruction: 00000005
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+   0:	0000001c 			@ <UNDEFINED> instruction: 0000001c
+   4:	00000002 			@ <UNDEFINED> instruction: 00000002
+			6: R_ARM_ABS32	.debug_info
+   8:	00040000 			@ <UNDEFINED> instruction: 00040000
+	...
+			10: R_ARM_ABS32	.text
+  14:	00000054 			@ <UNDEFINED> instruction: 00000054
+	...
+
+Disassembly of section .debug_str:
+
+00000000 <.debug_str>:
+   0:	6f697067 			@ <UNDEFINED> instruction: 6f697067
+   4:	2f00732e 			@ <UNDEFINED> instruction: 2f00732e
+   8:	656d6f68 			@ <UNDEFINED> instruction: 656d6f68
+   c:	6c754a2f 			@ <UNDEFINED> instruction: 6c754a2f
+  10:	2f746569 			@ <UNDEFINED> instruction: 2f746569
+  14:	79616c70 			@ <UNDEFINED> instruction: 79616c70
+  18:	756f7267 			@ <UNDEFINED> instruction: 756f7267
+  1c:	722f646e 			@ <UNDEFINED> instruction: 722f646e
+  20:	35333270 			@ <UNDEFINED> instruction: 35333270
+  24:	50522f30 			@ <UNDEFINED> instruction: 50522f30
+  28:	30353332 			@ <UNDEFINED> instruction: 30353332
+  2c:	44454c5f 			@ <UNDEFINED> instruction: 44454c5f
+  30:	554e4700 			@ <UNDEFINED> instruction: 554e4700
+  34:	20534120 			@ <UNDEFINED> instruction: 20534120
+  38:	33342e32 			@ <UNDEFINED> instruction: 33342e32
+	...
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002341 			@ <UNDEFINED> instruction: 00002341
+   4:	61656100 			@ <UNDEFINED> instruction: 61656100
+   8:	01006962 			@ <UNDEFINED> instruction: 01006962
+   c:	00000019 			@ <UNDEFINED> instruction: 00000019
+  10:	726f4305 			@ <UNDEFINED> instruction: 726f4305
+  14:	2d786574 			@ <UNDEFINED> instruction: 2d786574
+  18:	0033334d 			@ <UNDEFINED> instruction: 0033334d
+  1c:	4d071106 			@ <UNDEFINED> instruction: 4d071106
+  20:	012e0309 			@ <UNDEFINED> instruction: 012e0309

@@ -1,0 +1,191 @@
+
+bin/uart.o:     file format elf32-littlearm
+bin/uart.o
+architecture: armv8-m.main, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+private flags = 0x5000000: [Version5 EABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000ac  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00000000  00000000  000000e0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  000000e0  2**0
+                  ALLOC
+  3 .debug_line   00000079  00000000  00000000  000000e0  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  4 .debug_info   00000026  00000000  00000000  00000159  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  5 .debug_abbrev 00000014  00000000  00000000  0000017f  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_aranges 00000020  00000000  00000000  00000198  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  7 .debug_str    00000045  00000000  00000000  000001b8  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .ARM.attributes 00000024  00000000  00000000  000001fd  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+20082000 l       *ABS*	00000000 STACK_TOP
+2007a000 l       *ABS*	00000000 STACK_LIMIT
+40048000 l       *ABS*	00000000 XOSC_BASE
+40048000 l       *ABS*	00000000 XOSC_CTRL
+40048004 l       *ABS*	00000000 XOSC_STATUS
+4004800c l       *ABS*	00000000 XOSC_STARTUP
+e0000000 l       *ABS*	00000000 PPB_BASE
+e000ed88 l       *ABS*	00000000 CPACR
+40010000 l       *ABS*	00000000 CLOCKS_BASE
+40010048 l       *ABS*	00000000 CLK_PERI_CTRL
+40020000 l       *ABS*	00000000 RESETS_BASE
+40020000 l       *ABS*	00000000 RESETS_RESET
+40023000 l       *ABS*	00000000 RESETS_RESET_CLEAR
+40020008 l       *ABS*	00000000 RESETS_RESET_DONE
+40028000 l       *ABS*	00000000 IO_BANK0_BASE
+00000084 l       *ABS*	00000000 IO_BANK0_GPIO16_CTRL_OFFSET
+40038000 l       *ABS*	00000000 PADS_BANK0_BASE
+00000044 l       *ABS*	00000000 PADS_BANK0_GPIO16_OFFSET
+40070000 l       *ABS*	00000000 UART0_BASE
+0000000a l       .text	00000000 .UART_Release_Reset_Wait
+00000062 l       .text	00000000 .UART0_Out_Push_Registers
+00000066 l       .text	00000000 .UART0_Out_loop
+0000007a l       .text	00000000 .UART0_Out_Pop_Registers
+00000080 l       .text	00000000 .UART0_In_Push_Registers
+00000084 l       .text	00000000 .UART0_In_loop
+00000092 l       .text	00000000 .UART0_In_Pop_Registers
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 g     F .text	00000000 UART_Release_Reset
+00000016 g     F .text	00000000 UART_Init
+00000062 g     F .text	00000000 UART0_Out
+00000080 g     F .text	00000000 UART0_In
+
+
+Contents of section .text:
+ 0000 25480168 21f08061 01602448 016811f0  %H.h!..a.`$H.h..
+ 0010 806ffad0 70472248 4ff00201 4160c160  .o..pG"HO...A`.`
+ 0020 204800f1 04004ff0 04010160 1d4800f1   H....O....`.H..
+ 0030 08004ff0 40010160 1b484ff0 00010163  ..O.@..`.HO....c
+ 0040 4ff00601 41624ff0 21018162 4ff07001  O...AbO.!..bO.p.
+ 0050 c1624ff0 03014fea 012141f0 01010163  .bO...O..!A....c
+ 0060 70472de9 f05f104c a5694ff0 20063540  pG-.._.L.iO. .5@
+ 0070 f9d14ff0 ff063040 2060bde8 f05f7047  ..O...0@ `..._pG
+ 0080 2de9f05f 084ca569 4ff01006 3540f9d1  -.._.L.iO...5@..
+ 0090 2068bde8 f05f7047 00000240 08000240   h..._pG...@...@
+ 00a0 00800240 00800340 00000740           ...@...@...@    
+Contents of section .debug_line:
+ 0000 75000000 02001a00 00000201 fb0e0a00  u...............
+ 0010 01010101 00000001 00756172 742e7300  .........uart.s.
+ 0020 00000000 00050200 00000003 2a011e1e  ............*...
+ 0030 2c1f1e1e 2c1e0315 1d1e2c1e 1e1e2c2c  ,...,.....,...,,
+ 0040 1e1e2c2c 1e1e2c1e 2c1e2c1e 2c1e2c2c  ..,,..,.,.,.,.,,
+ 0050 2c1e030f 1d2d1e1e 2c1e1e2c 1e1f2c03  ,....-..,..,..,.
+ 0060 0e1d2d1e 1e2c1e1e 1f2c0396 7f1d3003  ..-..,...,....0.
+ 0070 192b2f33 02020001 01                 .+/3.....       
+Contents of section .debug_info:
+ 0000 22000000 02000000 00000401 00000000  "...............
+ 0010 00000000 ac000000 00000000 07000000  ................
+ 0020 39000000 0180                        9.....          
+Contents of section .debug_abbrev:
+ 0000 01110010 06110112 01030e1b 0e250e13  .............%..
+ 0010 05000000                             ....            
+Contents of section .debug_aranges:
+ 0000 1c000000 02000000 00000400 00000000  ................
+ 0010 00000000 ac000000 00000000 00000000  ................
+Contents of section .debug_str:
+ 0000 75617274 2e73002f 686f6d65 2f4a756c  uart.s./home/Jul
+ 0010 6965742f 706c6179 67726f75 6e642f72  iet/playground/r
+ 0020 70323335 302f5250 32333530 5f554152  p2350/RP2350_UAR
+ 0030 545f4472 69766572 00474e55 20415320  T_Driver.GNU AS 
+ 0040 322e3433 00                          2.43.           
+Contents of section .ARM.attributes:
+ 0000 41230000 00616561 62690001 19000000  A#...aeabi......
+ 0010 05436f72 7465782d 4d333300 0611074d  .Cortex-M33....M
+ 0020 09032e01                             ....            
+
+Disassembly of section .text:
+
+00000000 <UART_Release_Reset>:
+   0:	4825      	ldr	r0, [pc, #148]	@ (98 <.UART0_In_Pop_Registers+0x6>)
+   2:	6801      	ldr	r1, [r0, #0]
+   4:	f021 6180 	bic.w	r1, r1, #67108864	@ 0x4000000
+   8:	6001      	str	r1, [r0, #0]
+
+0000000a <.UART_Release_Reset_Wait>:
+   a:	4824      	ldr	r0, [pc, #144]	@ (9c <.UART0_In_Pop_Registers+0xa>)
+   c:	6801      	ldr	r1, [r0, #0]
+   e:	f011 6f80 	tst.w	r1, #67108864	@ 0x4000000
+  12:	d0fa      	beq.n	a <.UART_Release_Reset_Wait>
+  14:	4770      	bx	lr
+
+00000016 <UART_Init>:
+  16:	4822      	ldr	r0, [pc, #136]	@ (a0 <.UART0_In_Pop_Registers+0xe>)
+  18:	f04f 0102 	mov.w	r1, #2
+  1c:	6041      	str	r1, [r0, #4]
+  1e:	60c1      	str	r1, [r0, #12]
+  20:	4820      	ldr	r0, [pc, #128]	@ (a4 <.UART0_In_Pop_Registers+0x12>)
+  22:	f100 0004 	add.w	r0, r0, #4
+  26:	f04f 0104 	mov.w	r1, #4
+  2a:	6001      	str	r1, [r0, #0]
+  2c:	481d      	ldr	r0, [pc, #116]	@ (a4 <.UART0_In_Pop_Registers+0x12>)
+  2e:	f100 0008 	add.w	r0, r0, #8
+  32:	f04f 0140 	mov.w	r1, #64	@ 0x40
+  36:	6001      	str	r1, [r0, #0]
+  38:	481b      	ldr	r0, [pc, #108]	@ (a8 <.UART0_In_Pop_Registers+0x16>)
+  3a:	f04f 0100 	mov.w	r1, #0
+  3e:	6301      	str	r1, [r0, #48]	@ 0x30
+  40:	f04f 0106 	mov.w	r1, #6
+  44:	6241      	str	r1, [r0, #36]	@ 0x24
+  46:	f04f 0121 	mov.w	r1, #33	@ 0x21
+  4a:	6281      	str	r1, [r0, #40]	@ 0x28
+  4c:	f04f 0170 	mov.w	r1, #112	@ 0x70
+  50:	62c1      	str	r1, [r0, #44]	@ 0x2c
+  52:	f04f 0103 	mov.w	r1, #3
+  56:	ea4f 2101 	mov.w	r1, r1, lsl #8
+  5a:	f041 0101 	orr.w	r1, r1, #1
+  5e:	6301      	str	r1, [r0, #48]	@ 0x30
+  60:	4770      	bx	lr
+
+00000062 <UART0_Out>:
+  62:	e92d 5ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+
+00000066 <.UART0_Out_loop>:
+  66:	4c10      	ldr	r4, [pc, #64]	@ (a8 <.UART0_In_Pop_Registers+0x16>)
+  68:	69a5      	ldr	r5, [r4, #24]
+  6a:	f04f 0620 	mov.w	r6, #32
+  6e:	4035      	ands	r5, r6
+  70:	d1f9      	bne.n	66 <.UART0_Out_loop>
+  72:	f04f 06ff 	mov.w	r6, #255	@ 0xff
+  76:	4030      	ands	r0, r6
+  78:	6020      	str	r0, [r4, #0]
+
+0000007a <.UART0_Out_Pop_Registers>:
+  7a:	e8bd 5ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+  7e:	4770      	bx	lr
+
+00000080 <UART0_In>:
+  80:	e92d 5ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+
+00000084 <.UART0_In_loop>:
+  84:	4c08      	ldr	r4, [pc, #32]	@ (a8 <.UART0_In_Pop_Registers+0x16>)
+  86:	69a5      	ldr	r5, [r4, #24]
+  88:	f04f 0610 	mov.w	r6, #16
+  8c:	4035      	ands	r5, r6
+  8e:	d1f9      	bne.n	84 <.UART0_In_loop>
+  90:	6820      	ldr	r0, [r4, #0]
+
+00000092 <.UART0_In_Pop_Registers>:
+  92:	e8bd 5ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+  96:	4770      	bx	lr
+  98:	40020000 	.word	0x40020000
+  9c:	40020008 	.word	0x40020008
+  a0:	40028000 	.word	0x40028000
+  a4:	40038000 	.word	0x40038000
+  a8:	40070000 	.word	0x40070000

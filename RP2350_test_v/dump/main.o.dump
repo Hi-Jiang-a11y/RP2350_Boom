@@ -1,0 +1,109 @@
+
+bin/main.o:     file format elf32-littlearm
+bin/main.o
+architecture: armv8-m.main, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+private flags = 0x5000000: [Version5 EABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000014  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000048  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00000048  2**0
+                  ALLOC
+  3 .rodata       00000000  00000000  00000000  00000048  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .debug_line   00000038  00000000  00000000  00000048  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  5 .debug_info   00000026  00000000  00000000  00000080  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  6 .debug_abbrev 00000014  00000000  00000000  000000a6  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_aranges 00000020  00000000  00000000  000000c0  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  8 .debug_str    00000045  00000000  00000000  000000e0  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .ARM.attributes 00000024  00000000  00000000  00000125  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+20082000 l       *ABS*	00000000 STACK_TOP
+2007a000 l       *ABS*	00000000 STACK_LIMIT
+40048000 l       *ABS*	00000000 XOSC_BASE
+40048000 l       *ABS*	00000000 XOSC_CTRL
+40048004 l       *ABS*	00000000 XOSC_STATUS
+4004800c l       *ABS*	00000000 XOSC_STARTUP
+e0000000 l       *ABS*	00000000 PPB_BASE
+e000ed88 l       *ABS*	00000000 CPACR
+40010000 l       *ABS*	00000000 CLOCKS_BASE
+40010048 l       *ABS*	00000000 CLK_PERI_CTRL
+40020000 l       *ABS*	00000000 RESETS_BASE
+40020000 l       *ABS*	00000000 RESETS_RESET
+40023000 l       *ABS*	00000000 RESETS_RESET_CLEAR
+40020008 l       *ABS*	00000000 RESETS_RESET_DONE
+40028000 l       *ABS*	00000000 IO_BANK0_BASE
+00000084 l       *ABS*	00000000 IO_BANK0_GPIO16_CTRL_OFFSET
+40038000 l       *ABS*	00000000 PADS_BANK0_BASE
+00000044 l       *ABS*	00000000 PADS_BANK0_GPIO16_OFFSET
+40070000 l       *ABS*	00000000 UART0_BASE
+00000000 l       .text	00000000 .Push_Registers
+0000000e l       .text	00000000 .Pop_Registers
+00000000 l    d  .rodata	00000000 .rodata
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 g     F .text	00000000 main
+00000000         *UND*	00000000 UART0_In
+00000000         *UND*	00000000 UART0_Out
+
+
+Contents of section .text:
+ 0000 2de9f05f fff7feff fff7feff fae7bde8  -.._............
+ 0010 f05f7047                             ._pG            
+Contents of section .debug_line:
+ 0000 34000000 02001a00 00000201 fb0e0a00  4...............
+ 0010 01010101 00000001 006d6169 6e2e7300  .........main.s.
+ 0020 00000000 00050200 00000003 28012d2c  ............(.-,
+ 0030 2c1f2c02 01000101                    ,.,.....        
+Contents of section .debug_info:
+ 0000 22000000 02000000 00000401 00000000  "...............
+ 0010 00000000 14000000 00000000 07000000  ................
+ 0020 39000000 0180                        9.....          
+Contents of section .debug_abbrev:
+ 0000 01110010 06110112 01030e1b 0e250e13  .............%..
+ 0010 05000000                             ....            
+Contents of section .debug_aranges:
+ 0000 1c000000 02000000 00000400 00000000  ................
+ 0010 00000000 14000000 00000000 00000000  ................
+Contents of section .debug_str:
+ 0000 6d61696e 2e73002f 686f6d65 2f4a756c  main.s./home/Jul
+ 0010 6965742f 706c6179 67726f75 6e642f72  iet/playground/r
+ 0020 70323335 302f5250 32333530 5f554152  p2350/RP2350_UAR
+ 0030 545f4472 69766572 00474e55 20415320  T_Driver.GNU AS 
+ 0040 322e3433 00                          2.43.           
+Contents of section .ARM.attributes:
+ 0000 41230000 00616561 62690001 19000000  A#...aeabi......
+ 0010 05436f72 7465782d 4d333300 0611074d  .Cortex-M33....M
+ 0020 09032e01                             ....            
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e92d 5ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+   4:	f7ff fffe 	bl	0 <UART0_In>
+			4: R_ARM_THM_CALL	UART0_In
+   8:	f7ff fffe 	bl	0 <UART0_Out>
+			8: R_ARM_THM_CALL	UART0_Out
+   c:	e7fa      	b.n	4 <main+0x4>
+
+0000000e <.Pop_Registers>:
+   e:	e8bd 5ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+  12:	4770      	bx	lr

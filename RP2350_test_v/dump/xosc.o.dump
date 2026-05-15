@@ -1,0 +1,124 @@
+
+bin/xosc.o:     file format elf32-littlearm
+bin/xosc.o
+architecture: armv8-m.main, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+private flags = 0x5000000: [Version5 EABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000040  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000074  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00000074  2**0
+                  ALLOC
+  3 .debug_line   0000004e  00000000  00000000  00000074  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  4 .debug_info   00000026  00000000  00000000  000000c2  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  5 .debug_abbrev 00000014  00000000  00000000  000000e8  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_aranges 00000020  00000000  00000000  00000100  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  7 .debug_str    00000045  00000000  00000000  00000120  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .ARM.attributes 00000024  00000000  00000000  00000165  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+20082000 l       *ABS*	00000000 STACK_TOP
+2007a000 l       *ABS*	00000000 STACK_LIMIT
+40048000 l       *ABS*	00000000 XOSC_BASE
+40048000 l       *ABS*	00000000 XOSC_CTRL
+40048004 l       *ABS*	00000000 XOSC_STATUS
+4004800c l       *ABS*	00000000 XOSC_STARTUP
+e0000000 l       *ABS*	00000000 PPB_BASE
+e000ed88 l       *ABS*	00000000 CPACR
+40010000 l       *ABS*	00000000 CLOCKS_BASE
+40010048 l       *ABS*	00000000 CLK_PERI_CTRL
+40020000 l       *ABS*	00000000 RESETS_BASE
+40020000 l       *ABS*	00000000 RESETS_RESET
+40023000 l       *ABS*	00000000 RESETS_RESET_CLEAR
+40020008 l       *ABS*	00000000 RESETS_RESET_DONE
+40028000 l       *ABS*	00000000 IO_BANK0_BASE
+00000084 l       *ABS*	00000000 IO_BANK0_GPIO16_CTRL_OFFSET
+40038000 l       *ABS*	00000000 PADS_BANK0_BASE
+00000044 l       *ABS*	00000000 PADS_BANK0_GPIO16_OFFSET
+40070000 l       *ABS*	00000000 UART0_BASE
+0000000e l       .text	00000000 .Init_XOSC_Wait
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 g     F .text	00000000 Init_XOSC
+0000001a g     F .text	00000000 Enable_XOSC_Peri_Clock
+
+
+Contents of section .text:
+ 0000 0a484ff0 c4010160 09480a49 01600a48  .HO....`.H.I.`.H
+ 0010 016811f0 004ffad0 70470848 016841f4  .h...O..pG.H.hA.
+ 0020 006141f0 80010160 70470000 0c800440  .aA....`pG.....@
+ 0030 00800440 a0bafa00 04800440 48000140  ...@.......@H..@
+Contents of section .debug_line:
+ 0000 4a000000 02001a00 00000201 fb0e0a00  J...............
+ 0010 01010101 00000001 00786f73 632e7300  .........xosc.s.
+ 0020 00000000 00050200 00000003 28011e2c  ............(..,
+ 0030 1e1e1e1f 1e1e2c1e 030d1d1e 1e2c2c1e  ......,......,,.
+ 0040 03632b2e 2c2e0311 2b020200 0101      .c+.,...+.....  
+Contents of section .debug_info:
+ 0000 22000000 02000000 00000401 00000000  "...............
+ 0010 00000000 40000000 00000000 07000000  ....@...........
+ 0020 39000000 0180                        9.....          
+Contents of section .debug_abbrev:
+ 0000 01110010 06110112 01030e1b 0e250e13  .............%..
+ 0010 05000000                             ....            
+Contents of section .debug_aranges:
+ 0000 1c000000 02000000 00000400 00000000  ................
+ 0010 00000000 40000000 00000000 00000000  ....@...........
+Contents of section .debug_str:
+ 0000 786f7363 2e73002f 686f6d65 2f4a756c  xosc.s./home/Jul
+ 0010 6965742f 706c6179 67726f75 6e642f72  iet/playground/r
+ 0020 70323335 302f5250 32333530 5f554152  p2350/RP2350_UAR
+ 0030 545f4472 69766572 00474e55 20415320  T_Driver.GNU AS 
+ 0040 322e3433 00                          2.43.           
+Contents of section .ARM.attributes:
+ 0000 41230000 00616561 62690001 19000000  A#...aeabi......
+ 0010 05436f72 7465782d 4d333300 0611074d  .Cortex-M33....M
+ 0020 09032e01                             ....            
+
+Disassembly of section .text:
+
+00000000 <Init_XOSC>:
+   0:	480a      	ldr	r0, [pc, #40]	@ (2c <Enable_XOSC_Peri_Clock+0x12>)
+   2:	f04f 01c4 	mov.w	r1, #196	@ 0xc4
+   6:	6001      	str	r1, [r0, #0]
+   8:	4809      	ldr	r0, [pc, #36]	@ (30 <Enable_XOSC_Peri_Clock+0x16>)
+   a:	490a      	ldr	r1, [pc, #40]	@ (34 <Enable_XOSC_Peri_Clock+0x1a>)
+   c:	6001      	str	r1, [r0, #0]
+
+0000000e <.Init_XOSC_Wait>:
+   e:	480a      	ldr	r0, [pc, #40]	@ (38 <Enable_XOSC_Peri_Clock+0x1e>)
+  10:	6801      	ldr	r1, [r0, #0]
+  12:	f011 4f00 	tst.w	r1, #2147483648	@ 0x80000000
+  16:	d0fa      	beq.n	e <.Init_XOSC_Wait>
+  18:	4770      	bx	lr
+
+0000001a <Enable_XOSC_Peri_Clock>:
+  1a:	4808      	ldr	r0, [pc, #32]	@ (3c <Enable_XOSC_Peri_Clock+0x22>)
+  1c:	6801      	ldr	r1, [r0, #0]
+  1e:	f441 6100 	orr.w	r1, r1, #2048	@ 0x800
+  22:	f041 0180 	orr.w	r1, r1, #128	@ 0x80
+  26:	6001      	str	r1, [r0, #0]
+  28:	4770      	bx	lr
+  2a:	0000      	.short	0x0000
+  2c:	4004800c 	.word	0x4004800c
+  30:	40048000 	.word	0x40048000
+  34:	00fabaa0 	.word	0x00fabaa0
+  38:	40048004 	.word	0x40048004
+  3c:	40010048 	.word	0x40010048
