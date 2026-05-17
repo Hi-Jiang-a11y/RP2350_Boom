@@ -39,7 +39,7 @@ main_loop:
     adds    r5, r5, #1
     str     r5, [sp, #4]        @ 计数++
 
-    cmp     r5, #50             @ 每 50 次循环改变一次亮度
+    cmp     r5, #5             @ 每 50 次循环改变一次亮度
     blt     main_loop
 
     movs    r5, #0              @ 重置计数
@@ -76,5 +76,3 @@ led_off:
     ldr     r1, =(1 << 15)      @ GPIO 15
     str     r1, [r0, #0x020]    @ GPIO OUT CLR (偏移 0x20)
     bx      lr
-
-@ (此处省略你之前的 gpio_initialize 和 led_on 函数)

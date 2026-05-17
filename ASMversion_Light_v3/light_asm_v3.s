@@ -27,7 +27,7 @@ vector_initialization:
 stack_initialization:
     ldr     r0, =STACK_TOP_ADDRESS
     mov     sp, r0                                  @ 設置堆疊指針
-    bl      _start                                  @ 跳轉至主程式
+    b       _start                                  @ 跳轉至主程式
 
 @ ---------------------------------------------------------
 @ 定義常數

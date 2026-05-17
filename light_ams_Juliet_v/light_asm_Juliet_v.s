@@ -1,5 +1,3 @@
-@ this file is modified by Juliet & Gemini
-
 .syntax unified
 .align 4
 .cpu cortex-m33
@@ -21,7 +19,7 @@ image_def:
 @ ---------------------------------------------------------
 .section .vectors, "ax"
     .word 0x20001000
-    .word _start + 1
+    .word _start
 
 @ ---------------------------------------------------------
 @ 程式碼段

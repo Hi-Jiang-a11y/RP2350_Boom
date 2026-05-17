@@ -2,8 +2,8 @@
 .cpu cortex-m33
 .thumb
 .global start
-start:
 
+start:
     @ Remove Reset Status
     ldr r0, =rst_base
     mov r1, #0x00000240

@@ -52,11 +52,11 @@ blocembd:
 .thumb_func
 initGpioLed:
     push {lr}
-    
+
     mov r0, #LED_PIN
     mov r1, #1
     lsl r1, r1, r0            @ r1 = 1 << 25
-    
+
     ldr r2, =SIO_BASE
     str r1, [r2, #GPIO_OE_SET] @ 设置输出使能
 
@@ -95,14 +95,14 @@ ledEclats:
     str r5, [r6, #GPIO_OUT_SET] @ 点亮
     mov r0, #250
     bl attendre
-    
+
     str r5, [r6, #GPIO_OUT_CLR] @ 熄灭
     mov r0, #250
     bl attendre
-    
+
     subs r4, r4, #1
     bgt 1b
-    
+
     pop {r4, r5, r6, pc}
 
 

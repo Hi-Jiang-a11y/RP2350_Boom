@@ -1,5 +1,5 @@
 # Program Settings
-NAME = blink
+NAME = ASMversion_Light_v0
 
 # Toolchain
 AS = arm-none-eabi-as

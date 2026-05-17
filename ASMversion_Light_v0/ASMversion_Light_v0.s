@@ -3,8 +3,9 @@
 .cpu cortex-m33
 .thumb
 
-@ The following image_def section is required to be a valid program image.
 
+
+@ IMAGE_DEF section
 .section .image_def, "a"
 image_def:
     .word 0xffffded3
@@ -13,17 +14,19 @@ image_def:
     .word 0x00000000
     .word 0xab123579
 
-@ Vector initialization
 
+
+@ Vector initialization (Vector Table, at the beginning of flash)
 .section .vectors, "ax"
-.equ STACK_TOP_ADDRESS, 0x20001000
+.equ STACK_TOP_ADDRESS, 0x20082000
 .global vector_initialization
 vector_initialization:
     .word STACK_TOP_ADDRESS                         @ Stack top address
     .word stack_initialization                      @ Stack initialization function (Thumb bit set)
 
-@ Stack pointer initialization
 
+
+@ Stack pointer initialization
 .section .text
 .global stack_initialization
 .thumb_func
@@ -32,12 +35,12 @@ stack_initialization:
     mov     sp, r0
     bl      _start                                  @ Jump to main program
 
-@ Program
 
+
+@ Program
 .equ LED_PIN, 15
 .equ LED_PIN_MASK, (1 << LED_PIN)
 .equ LED_PAD_SETUP, 0x56                            @ 4mA pull-down Schmitt input
-
 .thumb_func
 .global _start
 _start:

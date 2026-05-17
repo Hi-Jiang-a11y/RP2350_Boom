@@ -66,7 +66,7 @@ This tells the boot ROM that the next byte is a size field and the data describe
 ### Image Type Item — Size
 
 ```
-.byte  0x1                                       // item is 1 word in size
+.byte  0x1                                       // item is 1 byte in size
 ```
 
 The item payload is 1 word (4 bytes) long.

@@ -32,7 +32,7 @@ vector_initialization:
 .thumb_func
 stack_initialization:
     ldr     r0, =STACK_TOP_ADDRESS                  @ Define the stack top address
-    mov     sp, r0                  
+    mov     sp, r1
     bl      _start                                  @ Jump to main program
 
 @ Program entry
