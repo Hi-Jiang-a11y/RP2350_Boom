@@ -8,9 +8,8 @@
 _start:
     bl gpio_initialize
 
-    @ --- 局部变量初始化 ---
-    @ 我们打算在栈上存两个值：[sp, #0] 是当前亮度，[sp, #4] 是闪烁计数
-    sub     sp, sp, #8          @ 在栈上开辟 8 字节空间
+    @ [sp, #0] : 当前亮度，[sp, #4] : 闪烁计数
+    sub     sp, sp, #8          @ 开辟 8 字节空间
     movs    r0, #0
     str     r0, [sp, #0]        @ 亮度 = 0
     str     r0, [sp, #4]        @ 计数 = 0
@@ -19,14 +18,14 @@ main_loop:
     @ 读取局部变量
     ldr     r4, [sp, #0]        @ r4 = 亮度值 (0-100)
 
-    @ --- 逻辑：点亮 LED ---
+    @ --- 点亮 LED ---
     bl      led_on
 
     @ 延时（对应亮度的脉冲宽度）
     mov     r0, r4
     bl      delay_unit
 
-    @ --- 逻辑：熄灭 LED ---
+    @ --- 熄灭 LED ---
     bl      led_off
 
     @ 延时（对应剩下的周期）
@@ -34,12 +33,12 @@ main_loop:
     subs    r0, r1, r4          @ r0 = 100 - 亮度
     bl      delay_unit
 
-    @ --- 更新逻辑：改变亮度 ---
+    @ --- 改变亮度 ---
     ldr     r5, [sp, #4]        @ 读取计数
     adds    r5, r5, #1
     str     r5, [sp, #4]        @ 计数++
 
-    cmp     r5, #5             @ 每 50 次循环改变一次亮度
+    cmp     r5, #5              @ 每 50 次循环改变一次亮度
     blt     main_loop
 
     movs    r5, #0              @ 重置计数
@@ -54,7 +53,7 @@ store_brightness:
 
     b       main_loop
 
-@ --- 子程序：延时单元 ---
+@ --- 延时单元 ---
 .thumb_func
 delay_unit:
     @ r0 传入循环次数

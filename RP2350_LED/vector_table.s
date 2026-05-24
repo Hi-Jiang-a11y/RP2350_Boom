@@ -7,5 +7,5 @@
 
 .global vector_initialization
 vector_initialization:
-    .word 0x20082000          @ 棧頂地址
-    .word _start              @ 下一条指令的地址
+    .word 0x20082000          @ 栈顶地址
+    .word _start              @ Rest Handler 地址

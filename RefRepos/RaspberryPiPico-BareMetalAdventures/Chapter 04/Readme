@@ -1,5 +1,0 @@
-Life with David - Bare Metal Adventures Chapter 4
-Join David as he ditches the C/C++ SDK for true Bare Metal Programming on the Raspberry Pi Pico.  
-We’ll examine the boot process, vector tables, linker scripts and makefiles as we blink the LED 
-using almost no additional software overhead.
-
